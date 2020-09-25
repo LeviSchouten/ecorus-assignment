@@ -14,15 +14,6 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    if (request.method == 'GET'):
-        return 'Succes!'
-
-    if (request.method == 'POST'):
-        return 'Succesful post!'
-
-
 @app.route('/person', methods=['GET', 'POST'])
 def person():
     if request.method == 'POST':
