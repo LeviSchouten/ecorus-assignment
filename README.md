@@ -46,8 +46,8 @@ The code for this part can be found in the part1 directory. The person and offic
 
 For this part of the test I had initially planned on using Django, since it comes with a lot more features than flask out of the box. Especially using packages like 'django Rest framework', building an RESTful api becomes a lot easier and more production ready.
 
-But we were specifically tasked to use the classes we wrote in Part 1. Which made using traditions models to generate endpoints with the django rest framework a bit more challenging.
-So I eventually decided to use Flask since it offers a lot of freedom. I still had to modify the classes a little to turn them in to models and make them work with a database.
+But we were specifically tasked to use the classes we wrote in Part 1. Which made using traditional models to generate endpoints with the django rest framework a bit more challenging.
+So I eventually decided to use Flask since it offers more freedom. I still had to modify the classes a little to turn them in to models and make them work with a database.
 
 All the code for this part of the assignment can be found in the part2 directory.
 
@@ -55,15 +55,15 @@ All the code for this part of the assignment can be found in the part2 directory
 
 - What has been the more difficult part?
 
-Figuring out what exactly was expected of us for the second part of the exercise, and seeing how I can make the endpoints that I was writing to interact with the classes as REST as possible.
+Figuring out what exactly was expected of us for the second part of the exercise, and seeing how I can make the endpoints that I was writing to interact with the classes follow the rest principles as good as possible.
 
 - What part of the system could be improved?
 
-I would've liked to add proper error handeling through try/except blocks, I wasn't able to get to it for this exercise, but I think proper error handeling is very important for an API.
+I would've liked to add proper error handeling through try/except blocks, I wasn't able to get to it for this exercise, but I think proper error handeling is very important for an API. And would make an API a lot more usuable even without documentation.
 
 - How would you scale it, to be able to handle 1K calls per sec? and to handle 1M?
 
-I would firstly improve the database structure, and make better use of the relational nature of the database. To reduce on the amount of queries I'd have to make in future to connect parts of the data. For a better development experience I would also prefer to step away from flask and move over to django/djangorestframework. This to generate a more traditional rest api based on models. Rather than using the classes we had to write for part 1.
+I would firstly improve the database structure, and make better use of the relational nature of the database. To reduce on the amount of queries I'd have to make in future to connect parts of the data. For a better development experience I would also prefer to step away from flask and move over to django/djangorestframework. This to generate a more traditional rest api based on models. Rather than using the classes we had to write for part 1. (This would also allow me to make use of Django's build in features like an admin page).
 
 But when we're talking scaling purely in performance I believe how you query and structure your database is usually where you can make the most improvements.
 
@@ -73,4 +73,4 @@ I would look for a populair testing framework that fits my tools and my project 
 
 - How would you implement a continuous development system (pipelines) for this particular case?
 
-This heavily depends on the client/product-owner but ideally frequent meetings with the client, automated testing, actively taking feedback and keeping good communication within the team of developers making sure none of our builds collide -- or making sure we catch it in time -- and we're all on the same page.
+This heavily depends on the client/product-owner but ideally frequent meetings with the client, automated testing, actively taking feedback (bug reports) and keeping good communication within the team of developers making sure none of our builds collide -- or making sure we catch it in time -- and we're all on the same page.
