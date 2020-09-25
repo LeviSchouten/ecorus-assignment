@@ -16,6 +16,7 @@ session = DBSession()
 
 @app.route('/person', methods=['GET', 'POST'])
 def person():
+    # create new person or get list of all people
     if request.method == 'POST':
         new_person = Person(name=request.json['name'],
                             age=request.json['age'])
@@ -29,6 +30,7 @@ def person():
 
 @app.route('/person/<int:person_id>/birthday', methods=['POST'])
 def person_birthday(person_id):
+    # simulate chappy_birthday method on class
     person = session.query(Person).filter_by(id=person_id).one()
     person.happy_birthday()
     session.commit()
@@ -37,6 +39,7 @@ def person_birthday(person_id):
 
 @app.route('/person/<int:person_id>/name', methods=['POST', 'PUT'])
 def person_name(person_id):
+    # simulate change_name method on class
     person = session.query(Person).filter_by(id=person_id).one()
     person.change_name(name=request.json['name'])
     session.commit()
@@ -45,6 +48,7 @@ def person_name(person_id):
 
 @app.route('/office', methods=['GET', 'POST'])
 def office():
+    # create new office or get list of all offices
     if request.method == 'POST':
         new_office = Office(name=request.json['name'])
         session.add(new_office)
