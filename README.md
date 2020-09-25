@@ -63,9 +63,9 @@ I would've liked to add proper error handeling through try/except blocks, I wasn
 
 - How would you scale it, to be able to handle 1K calls per sec? and to handle 1M?
 
-If the intention was to make this more scalable I could either work on improving the database structure. I could make better use of the relational nature of the database, more specificely on the people-working table. Making sure these tables are properly relational can save me some additional queries in future.
+I would firstly improve the database structure, and make better use of the relational nature of the database. To reduce on the amount of queries I'd have to make in future to connect parts of the data. For a better development experience I would also prefer to step away from flask and move over to django/djangorestframework. This to generate a more traditional rest api based on models. Rather than using the classes we had to write for part 1.
 
-But ideally I would let go of the original classes and rewrite the app in django with something like djangorestframework, and create an api following more traditional standards. Whilest also making use of django's build in features making the app a lot more production ready with admin pages and such. Which would also directly give me a more maintainable and therefore better scalable file structure.
+But when we're talking scaling purely in performance I believe how you query and structure your database is usually where you can make the most improvements.
 
 - How would you automate the testing?
 
