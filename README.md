@@ -1,3 +1,41 @@
+# API
+
+The api can found live on http://164.90.192.45:5000/
+
+## Usage
+
+### /person
+
+> GET: List of all people
+
+> POST: Create new person (body: {name: string, age: number})
+
+### /person/<person_id>/name
+
+> POST/PUT: Change name of specific person (body: {name: string})
+
+### /person/<person_id>/birthday
+
+> POST: Increment person's birthday by one
+
+### office
+
+> GET: List of all offices
+
+> POST: create a new office (body: {name: string})
+
+### office/<office_id>/add
+
+> POST: add person to list of people working at office (body: {person_id: number})
+
+### office/<office_id>/remove
+
+> POST: remove person to list of people working at office (body: {person_id: number})
+
+### peopleworking
+
+> GET: list of people id's and the office id that they work at, can be used in frontend to connect.
+
 # Installation guide
 
 ## Part 1
