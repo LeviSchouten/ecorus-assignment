@@ -14,6 +14,11 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
+@app.route('/', methods=['GET'])
+def response():
+    return 'server working, go to /person for more results.'
+
+
 @app.route('/person', methods=['GET', 'POST'])
 def person():
     # create new person or get list of all people

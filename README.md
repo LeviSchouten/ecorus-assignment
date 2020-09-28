@@ -1,6 +1,7 @@
 # API
 
-The api can found live on http://164.90.192.45:5000/
+The api can found live on https://ecorus.herokuapp.com/
+hosted using heroku, initial load time might be slow because of the free tier (servers go to sleep after 30 minutes of not being used). But seemed safer that what I had on digital ocean.
 
 ## Usage
 
